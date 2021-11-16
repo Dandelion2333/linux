@@ -16,15 +16,14 @@
 		tar -zxvf FileName.tar.gz
 		
 	3、zip文件：
-		解压：
-			unzip xxx.zip
+		解压：unzip xxx.zip
 		
 4、处理Ubuntu空间不足的方法：
 	1、把大文件移动到另一个磁盘
 	2、把.vscode-server与cache文件移动到另一个磁盘
 		mv /home/sunyan/.cache /data1/sunyan/work/
 		mv /home/sunyan/.vscode-server /data1/sunyan/work/
-	3、然后使用软链接到原来的位置
+	3、然后使用软链接到原来的位置（前者是链接源，后者是个快捷方式）
 		ln -s  /data1/sunyan/work/.vscode-server /home/sunyan/.vscode-server
 		ln -s  /data1/sunyan/work/.cache /home/sunyan/.cache 
 
