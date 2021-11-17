@@ -1,5 +1,5 @@
 
-#加颜色，行号，自动缩进
+#vim配置-加颜色，行号，自动缩进
 set hlsearch            "高亮度反白 
 set backspace=2         "可随时用退格键删除 
 set autoindent          "自劢缩排 
@@ -13,5 +13,6 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-删除指令
-dd
+
+1、跳转指定行
+	命令行模式下输入:89，即可跳转到指定行
