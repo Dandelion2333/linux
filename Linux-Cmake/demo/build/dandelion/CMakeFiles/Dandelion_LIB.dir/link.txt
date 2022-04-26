@@ -1,0 +1,2 @@
+/usr/bin/ar qc libDandelion_LIB.a  CMakeFiles/Dandelion_LIB.dir/dandelion.c.o
+/usr/bin/ranlib libDandelion_LIB.a
