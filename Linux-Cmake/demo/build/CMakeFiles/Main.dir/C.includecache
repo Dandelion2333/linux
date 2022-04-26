@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../out/include/dandelion.h
+
+/home/tutu/work/cmake/demo/main.c
+stdio.h
+-
+dandelion.h
+/home/tutu/work/cmake/demo/dandelion.h
+
