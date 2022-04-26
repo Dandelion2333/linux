@@ -1,0 +1,3 @@
+系统设置：
+	设置时区为上海：sudo ln -svf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+	查看时区：timedatectl

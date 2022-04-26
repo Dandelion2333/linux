@@ -1,0 +1,14 @@
+freopen函数
+	用法：以指定模式，重新指定到另一个文件
+		函数申明：
+			FILE freopen(const char * restrict filename, const char * restrict mode, FILE * restrict stream);
+		形参说明：
+			filename：需要重定向到的文件名或文件路径。
+			mode：代表文件访问权限的字符串。例如，"r"表示“只读访问”、"w"表示“只写访问”、"a"表示“追加写入”。
+			stream：需要被重定向的文件流。
+			返回值：如果成功，则返回该指向该输出流的文件指针，否则返回为NULL。
+	例子：
+		把标准输出重定向到output.txt文件中。即改变了stdout的输出位置，之前是输出到屏幕打印
+			freopen("D:\\output.txt","w",stdout)
+		把标准输出重定向到cli控制台。cmd->value是指向了cli控制台。
+			freopen(cmd->value, "w", stdout);

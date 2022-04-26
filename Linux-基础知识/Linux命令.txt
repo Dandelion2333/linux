@@ -7,3 +7,63 @@
 	1、删除一个路径下的所有的文件：rm -rf *
 	2、删除单个文件：rm -rf file_name
 	3、删除一个文件夹：rm -rf folder_name
+	
+常规指令集：
+	目录：
+		创建多级目录：mkdir -p out/oem/config
+		
+1、tail指令
+	tail -f filename：实时打印文件，例如日志问及那
+		注意：必须要先到设备的日志目录下。如：cd /var/log/orb.log
+	结合管道筛选日志：
+		例如：指定显示device_queue相关的数据
+			tail -f /var/log/orb.log | grep device_queue
+	
+2、X-shell的复制粘贴命令
+	复制：Ctrl+insert
+	粘贴：Shift+insert
+	
+3、压缩与解压相关：
+	1、压缩文件：
+		tar -zcvf FileName.tar.gz Src_file	将Src_file和其下所有文件（夹）压缩
+	2、解压文件：
+		tar -zxvf FileName.tar.gz
+		
+	3、zip文件：
+		解压：unzip xxx.zip
+		
+4、处理Ubuntu空间不足的方法：
+	1、把大文件移动到另一个磁盘
+	2、把.vscode-server与cache文件移动到另一个磁盘
+		mv /home/sunyan/.cache /data1/sunyan/work/
+		mv /home/sunyan/.vscode-server /data1/sunyan/work/
+	3、然后使用软链接到原来的位置（前者是链接源，后者是个快捷方式）
+		ln -s  /data1/sunyan/work/.vscode-server /home/sunyan/.vscode-server
+		ln -s  /data1/sunyan/work/.cache /home/sunyan/.cache 
+
+5、软链接
+	1、ln指令
+		ln -s 源目录 目标路径（把源目录软链接到目标路径中，然后就可以通过目标路径访问源目录了）
+		ln -s /mixpad2_project/lib /mixpad2_project/app/vifamily/extern
+		
+6、系统服务类：
+	1、查看运行的所有进程
+		ps -aux
+		
+7、解决vscode写入文件时权限不足的问题
+	chmod 777 -R 文件夹名称
+	
+用户相关：
+	1、基础认识：
+		1、ls -l 可以查看文件夹下所有文件的详细信息。其中包含文件所有者与组
+		2、当我使用touch创建文件时，会提示我没有权限。因为文件夹所有者与组不是当前用户。
+	2、修改文件夹所有者与组的所有者
+		1、修改文件或者目录的所有者：chown user_name 文件名|目录名		（设置当前文件名|目录名）
+		2、修改文件或者目录的组：chgrp -R 组名 文件名|目录名			（设置当前目录下所有的文件与文件夹）
+	3、其他：
+		加上-R参数，可以把当前文件夹下的所有文件与文件夹都设置成同样功能
+		
+Linux基础指令：
+	查看文件的md5：md5sum filename
+	
+	
