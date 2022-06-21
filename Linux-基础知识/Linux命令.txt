@@ -65,5 +65,3 @@
 		
 Linux基础指令：
 	查看文件的md5：md5sum filename
-	
-	
